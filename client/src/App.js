@@ -1,9 +1,8 @@
-import './App.css';
 import MainRouter from './routes/router'
 
 function App() {
   return (
-    <div className="App">
+    <div className="w-screen h-screen">
       <MainRouter />
     </div>
   );
