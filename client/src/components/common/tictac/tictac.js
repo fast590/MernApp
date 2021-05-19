@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import TicTacCell from './tictacell'
 
 function TicTacPanel() {
 
-    const Array = [0,1,0,1,0,1,0,1,0]
+    const [ClickStatus, setClickStatus] = useState(0)
+
+    var Array = [0,1,0,1,0,1,0,1,0]
     // const Array = [2,2,2,2,2,2,2,2,2]
     const sendDataToParent = (index) => {
-
+        if(ClickStatus === 0) setClickStatus(1)
+        else setClickStatus(0)
     }
-
     const list = Array.map((item, index) => <TicTacCell num = {item} sendDataToParent={sendDataToParent} key = {index} />)
     
     return(

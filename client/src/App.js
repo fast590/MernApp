@@ -1,8 +1,9 @@
-import MainRouter from './routes/router'
+import './App.css';
+import MainRouter from './routers/router'
 
 function App() {
   return (
-    <div className="w-screen h-screen">
+    <div className="App">
       <MainRouter />
     </div>
   );

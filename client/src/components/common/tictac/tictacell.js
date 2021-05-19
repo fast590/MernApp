@@ -1,13 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 
-function TicTacCell({num}) {
+function TicTacCell({num, sendDataToParent}) {
+    
+    const [Cellinfo, setCellinfo] = useState()
 
     const handleClick = (e) =>{
-
+        setCellinfo(1)
+        sendDataToParent(Cellinfo)
     }
     
-    const disp = (num ===1) ? 'o' :
-                (num ===0) ? 'x' :''
+    const disp = (num === 1) ? 'o' :
+                (num === 0) ? 'x' :''
 
 
     return(
